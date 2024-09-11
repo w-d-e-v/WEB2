@@ -25,7 +25,7 @@
 	</p>
 	<p>
 		Wanneer heb je exact even veel dagen voor het jaar 2000 als daarna meegemaakt? Tijd voor een feestje!
-<form action="./index.php" method="post">
+<form action="./mec.php" method="post">
 	Geboortedatum:
 	<input type="date" name="bday">
 	<br />
