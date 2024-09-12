@@ -21,6 +21,37 @@
       <p class="p1">Times New Roman, een echte klassieker!</p>
       <p class="p2">Arial, wie kent het niet?</p>
       <p class="p3">Lucida Console, lekker eem!</p>
+
+      <div class="mt-5">
+        <h1>Fonts in Bootstrap 5</h1>
+        <p>Bootstrap 5 maakt het eenvoudig om lettertypen te beheren en aan te passen in je webprojecten. Het framework biedt standaard een set van systeemlettertypen, maar je kunt ook gemakkelijk aangepaste lettertypen toevoegen.</p>
+        
+        <h2>Standaard lettertypen</h2>
+        <p>Bootstrap 5 gebruikt een reeks systeemlettertypen die automatisch worden toegepast op je tekst. De standaard lettertypen zijn:</p>
+        <pre><code>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";</code></pre>
+        
+        <h2>Aangepaste lettertypen</h2>
+        <p>Als je aangepaste lettertypen wilt gebruiken, kun je deze eenvoudig toevoegen via CSS. Hier is een voorbeeld van hoe je een Google Font kunt toevoegen:</p>
+        <ol>
+          <li>Voeg de link naar het Google Font toe in de <code>&lt;head&gt;</code> van je HTML-document:</li>
+          <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;</code></pre>
+          <li>Pas het lettertype toe op je elementen met CSS:</li>
+          <pre><code>body {
+      font-family: 'Roboto', sans-serif;
+    }</code></pre>
+        </ol>
+        
+        <h2>Lettergrootte en -stijl</h2>
+        <p>Bootstrap 5 biedt ook klassen voor het aanpassen van de lettergrootte en -stijl. Hier zijn enkele voorbeelden:</p>
+        <ul>
+          <li><strong>Lettergrootte</strong>: Gebruik klassen zoals <code>.fs-1</code> tot <code>.fs-6</code> om de lettergrootte aan te passen.</li>
+          <li><strong>Letterstijl</strong>: Gebruik klassen zoals <code>.fw-bold</code> voor vetgedrukte tekst en <code>.fst-italic</code> voor cursieve tekst.</li>
+        </ul>
+        <p>Voorbeeld:</p>
+        <pre><code>&lt;p class="fs-1 fw-bold"&gt;Grote vetgedrukte tekst&lt;/p&gt;
+    &lt;p class="fs-6 fst-italic"&gt;Kleine cursieve tekst&lt;/p&gt;</code></pre>
+      </div>
+
    </div>
   </body>
 </html>
