@@ -9,6 +9,8 @@ define('FILES_PATH', $root . 'transaction_files' . DIRECTORY_SEPARATOR);
 define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
 function readFiles() {
+    $files = array();
+  
     scandir(FILES_PATH);
  
 }
