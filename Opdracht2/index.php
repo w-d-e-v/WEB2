@@ -22,11 +22,12 @@ if (is_dir(FILES_PATH)){
              if ($file !== '.'&& $file !== '..'){
  //volgens copilot moet je dit nu eerst in een array stoppen om geen error te krijgen, ik hoop dat het daarmee wel werkt
                 $filesArray[] = $file;
-      }
-      closedir($dh);
-    }
+             }
+        }
+        closedir($dh);
+        }
     }   
-  }
+  
   print_r("<ul>");
   foreach ($filesArray as $name){
     print_r('<li><A HREF="App.php?' . $name . '">' . $name . "</li><BR />");
