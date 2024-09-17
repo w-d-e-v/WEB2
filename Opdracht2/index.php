@@ -12,15 +12,14 @@ define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
 //Ik heb het W3schools voorbeeld verbasteld met een foreach loop
 //Probleem is dat . en .. (current path en bovenliggend path) ook weergegeven worden
-//Ik ga eerst kijken of ik hier makkelijk hyperlinks van kan maken
-//Maar op basis van de opdracht moet ik vermoedlelijk iets met method = POST
-//sturen richting App.php zodat die de inhoud kan gaan inlezen en sorteren 😵‍💫
+//Hyperlinks zijn aangemaakt en sturen richting App.php zodat die de inhoud kan gaan 
+//inlezen en sorteren 😵‍💫
 
 function readFiles(){
 if (is_dir(FILES_PATH)){
     if ($dh = opendir(FILES_PATH)){
         foreach(scandir(FILES_PATH) as $file){
-            print_r($file . "<BR />");
+            print_r('<A HREF="App.php?' . $file . '">' . $file . "<BR />");
       }
       closedir($dh);
     }
