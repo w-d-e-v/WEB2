@@ -9,13 +9,15 @@ define('FILES_PATH', $root . 'transaction_files' . DIRECTORY_SEPARATOR);
 define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
 function readFiles() {
-    $files = array();
+    
     opendir(FILES_PATH);
-    scandir(FILES_PATH);
+    foreach(scandir(FILES_PATH) as $file){
+        print_r($file);
+    }
     closedir(FILES_PATH);
  
 }
 
 readFiles();
-print_r($files);
+
 
