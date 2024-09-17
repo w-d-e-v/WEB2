@@ -20,7 +20,7 @@ function readFiles(){
 if (is_dir(FILES_PATH)){
     if ($dh = opendir(FILES_PATH)){
         foreach(scandir(FILES_PATH) as $file){
-            print_r('<A HREF="'. FILES_PATH . DIRECTORY_SEPARATOR . $file . '>' . $file . "<BR />");
+            print_r($file . "<BR />");
       }
       closedir($dh);
     }
