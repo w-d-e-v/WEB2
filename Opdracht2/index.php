@@ -11,7 +11,7 @@ define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
 
 //Ik heb het W3schools voorbeeld verbasteld met een foreach loop
-//Probleem is dat . en .. (current path en bovenliggend path) ook weergegeven worden
+//We strippen current path en bovenliggend path er af met if isnot?
 //Hyperlinks zijn aangemaakt en sturen richting App.php zodat die de inhoud kan gaan 
 //inlezen en sorteren 😵‍💫
 
@@ -19,10 +19,12 @@ function readFiles(){
 if (is_dir(FILES_PATH)){
     if ($dh = opendir(FILES_PATH)){
         foreach(scandir(FILES_PATH) as $file){
+            if ($file !== '.'&& $file !== '..'){
             print_r('<A HREF="App.php?' . $file . '">' . $file . "<BR />");
       }
       closedir($dh);
     }
+    }   
   }
 }
 
