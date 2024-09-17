@@ -8,7 +8,7 @@ $root = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'Opdracht2' . DIRECTORY_SEPARAT
 define('APP_PATH', $root . 'app' . DIRECTORY_SEPARATOR);
 define('FILES_PATH', $root . 'transaction_files' . DIRECTORY_SEPARATOR);
 define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
-
+/*
 function readFiles() {
     
     opendir(FILES_PATH);
@@ -20,3 +20,14 @@ function readFiles() {
 }
 
 readFiles();
+*/
+
+// W3 schools to the rescue!
+if (is_dir(FILES_PATH)){
+    if ($dh = opendir(FILES_PATH)){
+      while (($file = readdir($dh)) !== false){
+        echo "filename:" . $file . "<br>";
+      }
+      closedir($dh);
+    }
+  }
