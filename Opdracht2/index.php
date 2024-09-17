@@ -23,6 +23,8 @@ readFiles();
 */
 
 // W3 schools to the rescue!
+
+function readFiles(){
 if (is_dir(FILES_PATH)){
     if ($dh = opendir(FILES_PATH)){
       while (($file = readdir($dh)) !== false){
@@ -31,3 +33,6 @@ if (is_dir(FILES_PATH)){
       closedir($dh);
     }
   }
+}
+
+readFiles();
