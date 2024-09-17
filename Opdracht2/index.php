@@ -11,7 +11,7 @@ define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
 
 //Ik heb het W3schools voorbeeld verbasteld met een foreach loop
-//We strippen current path en bovenliggend path er af met if isnot?
+//We strippen current path en bovenliggend path er af door een extra array
 //Hyperlinks zijn aangemaakt en sturen richting App.php zodat die de inhoud kan gaan 
 //inlezen en sorteren 😵‍💫
 
@@ -19,13 +19,19 @@ function readFiles(){
 if (is_dir(FILES_PATH)){
     if ($dh = opendir(FILES_PATH)){
         foreach(scandir(FILES_PATH) as $file){
- //           if ($file !== '.'&& $file !== '..'){
-            print_r('<A HREF="App.php?' . $file . '">' . $file . "<BR />");
+             if ($file !== '.'&& $file !== '..'){
+ //volgens copilot moet je dit nu eerst in een array stoppen om geen error te krijgen, ik hoop dat het daarmee wel werkt
+                $filesArray[] = $file;
       }
       closedir($dh);
     }
     }   
- // }
+  }
+  print_r("<ul>");
+  foreach ($filesArray as $name){
+    print_r('<li><A HREF="App.php?' . $name . '">' . $name . "</li><BR />");
+    }
+    print_r("</ul>");
 }
 
 readFiles();
