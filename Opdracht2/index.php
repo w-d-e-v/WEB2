@@ -19,13 +19,13 @@ function readFiles(){
 if (is_dir(FILES_PATH)){
     if ($dh = opendir(FILES_PATH)){
         foreach(scandir(FILES_PATH) as $file){
-            if ($file !== '.'&& $file !== '..'){
+ //           if ($file !== '.'&& $file !== '..'){
             print_r('<A HREF="App.php?' . $file . '">' . $file . "<BR />");
       }
       closedir($dh);
     }
     }   
-  }
+ // }
 }
 
 readFiles();
