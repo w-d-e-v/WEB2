@@ -27,8 +27,8 @@ readFiles();
 function readFiles(){
 if (is_dir(FILES_PATH)){
     if ($dh = opendir(FILES_PATH)){
-      while (($file = readdir($dh)) !== false){
-        echo "filename:" . $file . "<br>";
+        foreach(scandir(FILES_PATH) as $file){
+            print_r($file . "<BR />");
       }
       closedir($dh);
     }
