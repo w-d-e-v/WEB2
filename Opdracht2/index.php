@@ -12,12 +12,12 @@ function readFiles() {
     
     opendir(FILES_PATH);
     foreach(scandir(FILES_PATH) as $file){
-        print_r($file);
+        var_dump($file);
     }
     closedir(FILES_PATH);
  
 }
 
 readFiles();
-
+var_dump($file);
 
