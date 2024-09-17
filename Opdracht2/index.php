@@ -13,13 +13,10 @@ function readFiles() {
     
     opendir(FILES_PATH);
     foreach(scandir(FILES_PATH) as $file){
-        var_dump($file);
+        print_r($file);
     }
     closedir(FILES_PATH);
  
 }
 
 readFiles();
-var_dump($file);
-
-print_r($file);
