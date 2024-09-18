@@ -18,18 +18,26 @@ if (isset($_GET['file'])){
     }
 
 //Nu willen we op basis van een switch de transformatie doen
+//Garbage in, maar clean output. Wat een opdracht...
+//Laten we eerst de separators en decimaaltekens definiëren
 
 switch ($fileName){
     case "gegevens-1.csv":
         print_r("Het gekozen bestand is gegevens-1.csv");
+        $separator = ",";
+        $decimal = ".";
         include VIEWS_PATH . 'transactions.php'; 
         break;
     case "transacties-1.csv":
         print_r("Het gekozen bestand is transacties-1.csv");
+        $separator = "\t";
+        $decimal = ",";
         include VIEWS_PATH . 'transactions.php'; 
         break;
     case "transacties-2.csv":
         print_r("Het gekozen bestand is transacties-2.csv");
+        $separator = "\t";
+        $decimal = ",";
         include VIEWS_PATH . 'transactions.php'; 
         break;
     default:
