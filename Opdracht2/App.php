@@ -20,6 +20,7 @@ switch ($fileName){
         break;
     case "transacties-2.csv":
         print_r("Het gekozen bestand is transacties-2.csv");
+        break;
     default:
         print_r("Deze zie je als je App.php direct oproept");
     }
