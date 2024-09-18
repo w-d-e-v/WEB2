@@ -1,17 +1,15 @@
 <?php
 
 declare(strict_types = 1);
+//Binnenhalen en decoderen van de bestandsnaam
+if (isset($_GET['file'])){
+    $fileName = urldecode($_GET['file']);
+    }
+    else { //Wanneer iemand App.php oproept willen we geen undeclared variable zien
+        $fileName = NULL;
+    }
 
-//Eerst uitvogelen welk bestand we binnenkrijgen. Dit doen we door een vieze
-//hack want kennelijk is de filename de key en niet de value in dit GET array
-$fileArray = $_GET;
-
-foreach ($fileArray as $fileName=>$value){
-
-print_r($fileName);
-}
-
-//Nu willen we op basis van een if..elseif..else of switch de transformatie doen
+//Nu willen we op basis van een switch de transformatie doen
 
 switch ($fileName){
     case "gegevens-1.csv":

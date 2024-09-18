@@ -27,10 +27,11 @@ if (is_dir(FILES_PATH)){
         closedir($dh);
         }
     }   
-  
+  //We moeten voor de integriteit van de bestandsnaam een urlencode() gebruiken anders wordt de punt voor de bestandsextensie een underscore
   print_r("<ul>");
   foreach ($filesArray as $name){
-    print_r('<li><A HREF="App.php?' . $name . '">' . $name . "</li><BR />");
+    $encodedName = urlencode($name);
+    print_r('<li><A HREF="App.php?file=' . $encodedName . '">' . $encodedName . "</li><BR />");
     }
     print_r("</ul>");
 }
