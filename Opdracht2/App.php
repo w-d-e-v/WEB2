@@ -2,4 +2,6 @@
 
 declare(strict_types = 1);
 
-// HIER CODE
+//Eerst uitvogelen welk bestand we binnenkrijgen
+$fileName = $_GET;
+var_dump($fileName);
