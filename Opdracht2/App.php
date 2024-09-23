@@ -52,7 +52,14 @@ function readCSV($fileName){
     
      //Open het bestand
      $fileHandle = fopen(FILES_PATH . $fileName, "r");
-        var_dump(fgetcsv($fileHandle, 1000, $separator));
+        //Strip de eerste regel garbage er af
+        $stripHeaders = fgetcsv($fileHandle);
+        
+        $data = (fgetcsv($fileHandle, 1000, $separator));
+        foreach ($data as $value){
+            $value = str_replace($decimal, '.', $value);
+            var_dump($value);
+        }
 
         fclose($fileHandle);
 }
