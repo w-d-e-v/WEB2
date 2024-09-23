@@ -50,6 +50,10 @@ function readCSV($fileName){
             print_r("Deze zie je als je App.php direct oproept, je krijgt nu dus geen tabel of data te zien (pannekoek)");
         }
     
-        
+     //Open het bestand
+     $fileHandle = fopen(FILES_PATH . $fileName, "r");
+        print_r(fgetcsv($fileHandle, 1000, "r"));
 
+        fclose($fileHandle);
 }
+readCSV($fileName);
