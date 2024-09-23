@@ -52,15 +52,17 @@ function readCSV($fileName){
         //Strip de eerste regel garbage er af
         $stripHeaders = fgetcsv($fileHandle);
         
-        while ($row = (fgetcsv($fileHandle, 500, $separator))){
-           foreach ($row as $value){
-                $value = str_replace($decimal, '.', $value);
+        while ($row = fgetcsv($fileHandle, 500, $separator, "\"", "\\")){
+           foreach ($row as $value) {
+                $value = str_replace($decimal, ".", $value);
+           }
                 $data[] = $row;
                 
         }
-    }
-    }
+    
+    
         fclose($fileHandle);
+}
         include VIEWS_PATH . 'transactions.php'; 
 }
 readCSV($fileName);
