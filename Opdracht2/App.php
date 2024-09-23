@@ -19,27 +19,37 @@ if (isset($_GET['file'])){
 
 //Nu willen we op basis van een switch de transformatie doen
 //Garbage in, maar clean output. Wat een opdracht...
-//Laten we eerst de separators en decimaaltekens definiëren
+//We beginnen met een functie
 
-switch ($fileName){
-    case "gegevens-1.csv":
-        print_r("Het gekozen bestand is gegevens-1.csv");
-        $separator = ",";
-        $decimal = ".";
-        include VIEWS_PATH . 'transactions.php'; 
-        break;
-    case "transacties-1.csv":
-        print_r("Het gekozen bestand is transacties-1.csv");
-        $separator = "\t";
-        $decimal = ",";
-        include VIEWS_PATH . 'transactions.php'; 
-        break;
-    case "transacties-2.csv":
-        print_r("Het gekozen bestand is transacties-2.csv");
-        $separator = "\t";
-        $decimal = ",";
-        include VIEWS_PATH . 'transactions.php'; 
-        break;
-    default:
-        print_r("Deze zie je als je App.php direct oproept, je krijgt nu dus geen tabel of data te zien (pannekoek)");
-    }
+function readCSV($fileName){
+    $data = []; //alle inhoud moet in een array
+    $separator = ',';
+    $decimal ='.';
+
+    //Laten we dan eerst de separators en decimaaltekens definiëren
+    switch ($fileName){
+        case "gegevens-1.csv":
+            print_r("Het gekozen bestand is gegevens-1.csv");
+            $separator = ",";
+            $decimal = ".";
+            include VIEWS_PATH . 'transactions.php'; 
+            break;
+        case "transacties-1.csv":
+            print_r("Het gekozen bestand is transacties-1.csv");
+            $separator = "\t";
+            $decimal = ",";
+            include VIEWS_PATH . 'transactions.php'; 
+            break;
+        case "transacties-2.csv":
+            print_r("Het gekozen bestand is transacties-2.csv");
+            $separator = "\t";
+            $decimal = ",";
+            include VIEWS_PATH . 'transactions.php'; 
+            break;
+        default:
+            print_r("Deze zie je als je App.php direct oproept, je krijgt nu dus geen tabel of data te zien (pannekoek)");
+        }
+    
+        
+
+}
