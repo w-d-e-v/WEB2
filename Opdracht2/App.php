@@ -32,19 +32,16 @@ function readCSV($fileName){
             print_r("Het gekozen bestand is gegevens-1.csv");
             $separator = ",";
             $decimal = ".";
-            include VIEWS_PATH . 'transactions.php'; 
             break;
         case "transacties-1.csv":
             print_r("Het gekozen bestand is transacties-1.csv");
             $separator = "\t";
             $decimal = ",";
-            include VIEWS_PATH . 'transactions.php'; 
             break;
         case "transacties-2.csv":
             print_r("Het gekozen bestand is transacties-2.csv");
             $separator = "\t";
             $decimal = ",";
-            include VIEWS_PATH . 'transactions.php'; 
             break;
         default:
             print_r("Deze zie je als je App.php direct oproept, je krijgt nu dus geen tabel of data te zien (pannekoek)");
@@ -59,7 +56,7 @@ function readCSV($fileName){
            foreach ($row as $value){
                 $value = str_replace($decimal, '.', $value);
                 $data[] = $row;
-                var_dump($data);
+                include VIEWS_PATH . 'transactions.php'; 
         }
     }
     }
