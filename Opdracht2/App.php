@@ -51,18 +51,18 @@ function readCSV($fileName){
      if (($fileHandle = fopen(FILES_PATH . $fileName, "r"))) {
         //Strip de eerste regel garbage er af
         $stripHeaders = fgetcsv($fileHandle);
-        
+        //Laad dan de overige meuk in
         while ($row = fgetcsv($fileHandle, 500, $separator, "\"", "\\")){
-           foreach ($row as $value) {
-                $value = str_replace($decimal, ".", $value);
+           foreach ($row as &$value) { //Deze ampersand helpt om de elementen in het array aan te passen!
+                $value = str_replace($decimal, ".", $value); //Maak de decimaal uniform een punt
            }
-                $data[] = $row;
+                $data[] = $row; //En voeg de inhoud van de regel toe aan het array
                 
         }
     
     
-        fclose($fileHandle);
+        fclose($fileHandle); //Absch(l)ießen
 }
-        include VIEWS_PATH . 'transactions.php'; 
+        include VIEWS_PATH . 'transactions.php'; //Druk het geheel in tabelsjabloon
 }
 readCSV($fileName);
