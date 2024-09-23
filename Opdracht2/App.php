@@ -56,10 +56,11 @@ function readCSV($fileName){
            foreach ($row as $value){
                 $value = str_replace($decimal, '.', $value);
                 $data[] = $row;
-                include VIEWS_PATH . 'transactions.php'; 
+                
         }
     }
     }
         fclose($fileHandle);
+        include VIEWS_PATH . 'transactions.php'; 
 }
 readCSV($fileName);
