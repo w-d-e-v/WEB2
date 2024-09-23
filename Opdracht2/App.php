@@ -52,7 +52,7 @@ function readCSV($fileName){
     
      //Open het bestand
      $fileHandle = fopen(FILES_PATH . $fileName, "r");
-        print_r(fgetcsv($fileHandle, 1000, "r"));
+        var_dump(fgetcsv($fileHandle, 1000, $separator));
 
         fclose($fileHandle);
 }
