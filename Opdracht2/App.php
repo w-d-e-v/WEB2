@@ -30,7 +30,7 @@ function readCSV($fileName){
     switch ($fileName){
         case "gegevens-1.csv":
             print_r("Het gekozen bestand is gegevens-1.csv");
-            $separator = ",";
+            $separator = ',';
             $decimal = ".";
             break;
         case "transacties-1.csv":
@@ -44,7 +44,7 @@ function readCSV($fileName){
             $decimal = ",";
             break;
         default:
-            print_r("Deze zie je als je App.php direct oproept, je krijgt nu dus geen tabel of data te zien (pannekoek)");
+            print_r("<H2><strong>Deze zie je als je App.php direct oproept, je krijgt nu dus geen tabel of data te zien (pannekoek)</h2></strong>");
         }
     
      //Open het bestand
@@ -52,6 +52,7 @@ function readCSV($fileName){
         //Strip de eerste regel garbage er af
         $stripHeaders = fgetcsv($fileHandle);
         //Laad dan de overige meuk in
+        
         while ($row = fgetcsv($fileHandle, 500, $separator, "\"", "\\")){
            foreach ($row as &$value) { //Deze ampersand helpt om de elementen in het array aan te passen!
             $value = str_replace('"', '', $value); //Strip alle overbodige double quotes weg uit <gegevens-1 class="csv"></gegevens-1>
