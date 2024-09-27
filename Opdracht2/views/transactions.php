@@ -21,6 +21,12 @@
             tfoot tr th {
                 text-align: right;
             }
+            .inkomsten {
+                color: green;
+            }
+            .uitgaven {
+                color: red;
+            }
         </style>
     </head>
     <body>
