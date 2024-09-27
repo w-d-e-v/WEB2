@@ -29,17 +29,17 @@ function readCSV($fileName){
     //Laten we dan eerst de separators en decimaaltekens definiëren
     switch ($fileName){
         case "gegevens-1.csv":
-            print_r("Het gekozen bestand is gegevens-1.csv");
+            print_r("<h1>Het gekozen bestand is gegevens-1.csv</h1>");
             $separator = ',';
             $decimal = ".";
             break;
         case "transacties-1.csv":
-            print_r("Het gekozen bestand is transacties-1.csv");
+            print_r("<h1>Het gekozen bestand is transacties-1.csv</h1>");
             $separator = "\t";
             $decimal = ",";
             break;
         case "transacties-2.csv":
-            print_r("Het gekozen bestand is transacties-2.csv");
+            print_r("<h1>Het gekozen bestand is transacties-2.csv</h1>");
             $separator = "\t";
             $decimal = ",";
             break;
