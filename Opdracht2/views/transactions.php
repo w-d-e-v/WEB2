@@ -57,7 +57,7 @@
                         }
                         else {
                             $totaalUit += $bedrag;
-                            echo '<td class="uitgaven"'. $bedrag . '</td>';
+                            echo '<td class="uitgaven">'. $bedrag . '</td>';
                         }
                     }
                 ?>
