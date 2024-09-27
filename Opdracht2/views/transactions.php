@@ -41,10 +41,18 @@
             </thead>
             <tbody>
                 <?php
+                    $totaalIn = 0; //zet de counters op 0
+                    $totaalUit = 0; //uit ook
+
                     foreach ($data as $row){
                         echo '<tr>';
                         foreach ($row as $cell){
                             echo '<td>' . $cell . '</td>';
+                        }
+                        $bedrag = $row[3];
+                        if ($bedrag > 0 ) {
+                            $totaalIn += $bedrag;
+                            echo '<td class="inkomsten">' . $bedrag . '</td>';
                         }
 
                     }
