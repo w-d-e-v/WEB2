@@ -47,7 +47,7 @@
 
                     foreach ($data as $row){
                         echo '<tr>';
-                        $datum = $row[0]; //pak waarde 0 voor de datum
+                        $datum = DateTime::createFromFormat('d/m/Y', $row[0])->format('j F Y'); //formatteer de datum juist
                         echo '<td>' . $datum . '</td>'; //plak het in kolom 1
                         $checkSum = $row[1]; //pak waarde 1 voor de checksum
                         echo '<td>' . $checkSum . '</td>'; //plak het in kolom 2
