@@ -53,7 +53,7 @@
                         echo '<td>' . $checkSum . '</td>'; //plak het in kolom 2
                         $beschrijving = $row[2]; //pak waarde 2 voor de beschrijving
                         echo '<td>' . $beschrijving . '</td>'; //en plak deze in kolom 3 
-                        }
+                        
                         $bedrag = $row[3]; //pak waarde 3 uit het array
                         if ($bedrag > 0 ) { //check of het boven of onder 0 is
                             $totaalIn += $bedrag; //tel bij totaal op
@@ -63,7 +63,7 @@
                             $totaalUit += $bedrag; //tel het negatieve bedrag op
                             echo '<td class="uitgaven">'. $bedrag . '</td>'; //plak het dan rood in de cel
                         }
-                    
+                    }
                 ?>
             </tbody>
             <tfoot>
