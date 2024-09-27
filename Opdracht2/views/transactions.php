@@ -44,6 +44,7 @@
                     $totaalIn = 0; //zet de counters op 0
                     $totaalUit = 0; //uit ook
 
+
                     foreach ($data as $row){
                         echo '<tr>';
                         foreach ($row as $cell){
@@ -72,7 +73,17 @@
                 </tr>
                 <tr>
                     <th colspan="3">Netto totaal:</th>
-                    <td><!-- HIER CODE --></td>
+                    <td>
+                        <?php 
+                            $eindTotaal = $totaalIn + $totaalUit;
+                                if ($eindTotaal > 0) {
+                                    echo '<div class="inkomsten">' . $eindTotaal . '</div>';
+                            }
+                            else {
+                                echo '<div class="uitgaven">' . $eindTotaal . '</div>';
+                            } 
+                    ?>
+                    </td>
                 </tr>
             </tfoot>
         </table>
