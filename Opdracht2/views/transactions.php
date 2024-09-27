@@ -47,8 +47,9 @@
 
                     foreach ($data as $row){
                         echo '<tr>';
-                        foreach ($row as $cell){
-                            echo '<td>' . $cell . '</td>';
+                        $datum = $row[0]; //pak waarde 0 voor de datum
+                        echo '<td>'. $datum . '</td>'; //plak het in kolom 1
+
                         }
                         $bedrag = $row[3]; //pak waarde 3 uit het array
                         if ($bedrag > 0 ) { //check of het boven of onder 0 is
@@ -59,7 +60,7 @@
                             $totaalUit += $bedrag; //tel het negatieve bedrag op
                             echo '<td class="uitgaven">'. $bedrag . '</td>'; //plak het dan rood in de cel
                         }
-                    }
+                    
                 ?>
             </tbody>
             <tfoot>
