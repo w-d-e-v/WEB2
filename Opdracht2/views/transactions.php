@@ -48,8 +48,11 @@
                     foreach ($data as $row){
                         echo '<tr>';
                         $datum = $row[0]; //pak waarde 0 voor de datum
-                        echo '<td>'. $datum . '</td>'; //plak het in kolom 1
-
+                        echo '<td>' . $datum . '</td>'; //plak het in kolom 1
+                        $checkSum = $row[1]; //pak waarde 1 voor de checksum
+                        echo '<td>' . $checkSum . '</td>'; //plak het in kolom 2
+                        $beschrijving = $row[2]; //pak waarde 2 voor de beschrijving
+                        echo '<td>' . $beschrijving . '</td>'; //en plak deze in kolom 3 
                         }
                         $bedrag = $row[3]; //pak waarde 3 uit het array
                         if ($bedrag > 0 ) { //check of het boven of onder 0 is
