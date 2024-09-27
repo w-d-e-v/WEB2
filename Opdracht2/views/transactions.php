@@ -54,18 +54,21 @@
                             $totaalIn += $bedrag;
                             echo '<td class="inkomsten">' . $bedrag . '</td>';
                         }
-
+                        else {
+                            $totaalUit += $bedrag;
+                            echo '<td class="uitgaven"'. $bedrag . '</td>';
+                        }
                     }
                 ?>
             </tbody>
             <tfoot>
                 <tr>
                     <th colspan="3">Totale Inkomsten:</th>
-                    <td><!-- HIER CODE --></td>
+                    <td class="inkomsten"><?php echo $totaalIn; ?></td>
                 </tr>
                 <tr>
                     <th colspan="3">Totale Uitgaven:</th>
-                    <td><!-- HIER CODE --></td>
+                    <td class="uitgaven"><?php echo $totaalUit; ?></td>
                 </tr>
                 <tr>
                     <th colspan="3">Netto totaal:</th>
