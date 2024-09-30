@@ -1,6 +1,6 @@
 <?php
   class UsersContr extends Users {
-    public function createUser($voornaam, $achternaam, $gebdat) {
-      $this->setUser($voornaam, $achternaam, $gebdat);
+    public function createUser($name, $email, $password) {
+      $this->setUser($name, $email, $password);
     }
   }

@@ -1,8 +1,8 @@
 <?php
   class Dbh {
-    private $host = 'localhost';
-    private $user = 'root';
-    private $pwd = '';
+    private $host = '127.0.0.1';
+    private $user = 'deeltijdUser';
+    private $pwd = 'geefMijToegang!';
     private $dbName = 'deeltijd';
 
     protected function connect() {
