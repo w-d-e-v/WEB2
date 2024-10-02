@@ -27,6 +27,10 @@
     $usersObj2 = new UsersContr();
     $usersObj2->createUser('Iet', 'Sanders', '1999-07-07');
     */
+
+    //ff testen of we een share kunnen maken op basis van wat ik heb gemaakt
+    $sharesObj = new SharesContr();
+    $sharesObj->createShare(1, 'Supertitel!', 'Dit is de body', 'https://blogding.com/');
   ?>
 </body>
 </html>
