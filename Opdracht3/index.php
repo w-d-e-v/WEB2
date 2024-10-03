@@ -33,9 +33,17 @@
     $sharesObj->createShare(1, 'Supertitel!', 'Dit is de body', 'https://blogding.com/');
     */
     
-    // Dan moet hij ook uitgelezen kunnen worden
+    /* Dan moet hij ook uitgelezen kunnen worden
     $sharesRead = new SharesView();
     echo $sharesRead->showShare(1);
+    */
+
+    $routes = [
+     // '/register' => controllers\RegisterController::class,
+     // '/login'=> controllers\LoginController::class,
+      '/shares' => classes\sharesview::class,
+  ];
+  
   ?>
 </body>
 </html>

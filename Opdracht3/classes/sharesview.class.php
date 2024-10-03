@@ -1,4 +1,7 @@
 <?php
+
+namespace classes;
+
   class SharesView extends Shares {
     public function showShare($id) {
       $results = $this->getShare($id);
