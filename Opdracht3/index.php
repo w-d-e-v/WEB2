@@ -28,14 +28,14 @@
     $usersObj2->createUser('Iet', 'Sanders', '1999-07-07');
     */
 
-    /* ff testen of we een share kunnen maken op basis van wat ik heb gemaakt
+    /* ff testen of we een share kunnen maken op basis van wat ik heb gemaakt 
     $sharesObj = new SharesContr();
-    $sharesObj->createShare(1, 'Supertitel!', 'Dit is de body', 'https://blogding.com/');
+    $sharesObj->createShare(2, 'En nog een derde!', 'Nu al succesvoller dan twitter', 'https://hatseflats.nl/');
     */
     
     // Dan moet hij ook uitgelezen kunnen worden
     $sharesRead = new SharesView();
-    echo $sharesRead->showShare(1);
+    echo $sharesRead->showShares();
   ?>
 </body>
 </html>

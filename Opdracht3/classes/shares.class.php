@@ -1,11 +1,10 @@
 <?php
     class Shares extends Dbh {
-        protected function getShare($id) {
+        protected function getShares() { //We halen een heel array op
             $sql = "SELECT shares.*, users.name FROM shares 
-                JOIN users ON shares.user_id = users.id 
-                WHERE shares.id = ?";
+                JOIN users ON shares.user_id = users.id"; 
             $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$id]);
+            $stmt->execute();// Geen individuele input meer
             // Use fetch() for 1 row, and fetchAll() for all rows
             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $results;
