@@ -1,15 +1,15 @@
 <?php
     class Shares extends Dbh {
-        protected function getShare($id) {
+        protected function getShares() { //niet meer per individuele share
             $sql = "SELECT shares.*, users.name FROM shares 
-                JOIN users ON shares.user_id = users.id 
-                WHERE shares.id = ?";
+                    JOIN users ON shares.user_id = users.id"; //dus de query moet anders
             $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$id]);
-            // Use fetch() for 1 row, and fetchAll() for all rows
+            $stmt->execute();
             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $results;
-    }
+        }
+    
+    
     protected function setShare($user_id, $title, $body, $link) {
         $sql = "INSERT INTO shares(user_id, title, body, link) VALUES (?, ?, ?, ?)";
         $stmt = $this->connect()->prepare($sql);
