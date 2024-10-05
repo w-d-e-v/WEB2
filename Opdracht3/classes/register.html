@@ -19,9 +19,21 @@
     <div class="mt-5 ms-5">
         <h1>Register an account with Blogding.com</h1>
         <form method="post" action="/register">
-            <input type="text" name="username" placeholder="Enter your preferred username here"><br>
-            <input type="password" name="password" placeholder="Enter your password here"><br>
-            <button>Submit</button>
+            <div class="col-12 col-md-6 col-lg-4">
+                <label for="inputName" class="form-label">Please enter your name:</label><br>
+                <input type="text" name="username" placeholder="Enter your username here"><br><br>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <label for="inputEmail" class="form-label">Please enter your e-mail address:</label><br>
+                <input type="email" id="email" name="email" placeholder="something@somedomain.tld"><br><br>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <label for="inputPassword" class="form-label">Please enter your password:</label><br>
+            <input type="password" name="password" placeholder="Enter your password here"><br><br>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <button>Submit</button>
+            </div>
         </form>
     </div>
 </body>
