@@ -1,3 +1,6 @@
+<?php
+            include '../includes/class-autoload.inc.php';
+            ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,8 @@
     </script>
     <div class="mt-5 ms-5">
         <h1>Register an account with Blogding.com</h1>
-        <form method="post" action="/register">
+        <form method="post" action="/classes/userscontr.class.php">
+
             <div class="col-12 col-md-6 col-lg-4">
                 <label for="inputName" class="form-label">Please enter your name:</label><br>
                 <input type="text" name="username" placeholder="Enter your username here"><br><br>
