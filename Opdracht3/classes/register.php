@@ -21,7 +21,7 @@
     </script>
     <div class="mt-5 ms-5">
         <h1>Register an account with Blogding.com</h1>
-        <form method="post" action="/classes/userscontr.class.php">
+        <form method="post" action="/register">
 
             <div class="col-12 col-md-6 col-lg-4">
                 <label for="inputName" class="form-label">Please enter your name:</label><br>

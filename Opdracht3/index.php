@@ -40,6 +40,7 @@
     
     $routes = [
       '/shares'=> [SharesView::class, 'showShares'],
+      '/register' => [UsersContr::class, 'createUser'],
     ];
 
     //Ik geef eerlijk toe dat ik dit zonder AI niet voor elkaar had gekregen
@@ -59,8 +60,8 @@
     if (array_key_exists($urlPath, $routes)) {
     $controllerClass = $routes[$urlPath][0];
     $method = $routes[$urlPath][1];
-    $controller = new $controllerClass();
-    $controller->$method();
+    $controller = new $controllerClass(); //  voorbeeld object maken zoals $sharesRead = new SharesView();
+    $controller->$method(); //  en aanroepen zoals echo $sharesRead->showShares();
 }
   ?>
 </body>
