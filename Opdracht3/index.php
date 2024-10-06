@@ -45,7 +45,7 @@
 
     //Ik geef eerlijk toe dat ik dit zonder AI niet voor elkaar had gekregen
     //Al begrijp ik als ik er naar kijk volgens mij redelijk wat er gebeurt
-    $urlPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $urlPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); //vul variabele met wat er achter de eerste slash/ staat
 
     if ($urlPath == '/' || $urlPath == '/index.php') { //alleen bij index.php of top domain start HTML tonen
     $startHtml = '<div class="position-relative mt-5">
@@ -57,9 +57,9 @@
     echo $startHtml;
     }
 
-    if (array_key_exists($urlPath, $routes)) {
-    $controllerClass = $routes[$urlPath][0];
-    $method = $routes[$urlPath][1];
+    if (array_key_exists($urlPath, $routes)) { //als we dit gevuld hebben
+    $controllerClass = $routes[$urlPath][0]; //vul deze waarde met wat er in $routes staat gedefinieerd als klasse
+    $method = $routes[$urlPath][1]; //en vul deze waarde met wat er voor functienaam (methodenaam) in $routes staat gedefinieerd
     $controller = new $controllerClass(); //  voorbeeld object maken zoals $sharesRead = new SharesView();
     $controller->$method(); //  en aanroepen zoals echo $sharesRead->showShares();
 }
