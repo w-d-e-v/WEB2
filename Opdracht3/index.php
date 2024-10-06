@@ -41,6 +41,7 @@
     $routes = [
       '/shares'=> [SharesView::class, 'showShares'],
       '/register' => [UsersContr::class, 'createUser'],
+      '/create' => [SharesContr::class, 'createShare'],
     ];
 
     //Ik geef eerlijk toe dat ik dit zonder AI niet voor elkaar had gekregen
