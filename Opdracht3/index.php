@@ -38,14 +38,6 @@
     echo $sharesRead->showShares();
     */
     
-    $startHtml = '<div class="position-relative mt-5">
-         <h1 style="text-align:center;">
-          Welcome to Blogding</h1><br>
-          <p style="text-align:center;"><strong>Find something cool? Share it with our community. Look at other shares as well</strong></p><br>
-          <p style="text-align:center;"><a class="btn btn-primary" href="/shares">Share Now</a></p><br>
-          </div>';
-    echo $startHtml;
-
     $routes = [
       '/shares'=> [SharesView::class, 'showShares'],
     ];
@@ -53,6 +45,17 @@
     //Ik geef eerlijk toe dat ik dit zonder AI niet voor elkaar had gekregen
     //Al begrijp ik als ik er naar kijk volgens mij redelijk wat er gebeurt
     $urlPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+    if ($urlPath == '/' || $urlPath == '/index.php') { //alleen bij index.php of top domain start HTML tonen
+    $startHtml = '<div class="position-relative mt-5">
+         <h1 style="text-align:center;">
+          Welcome to Blogding</h1><br>
+          <p style="text-align:center;"><strong>Find something cool? Share it with our community. Look at other shares as well</strong></p><br>
+          <p style="text-align:center;"><a class="btn btn-primary" href="/shares">Share Now</a></p><br>
+          </div>';
+    echo $startHtml;
+    }
+
     if (array_key_exists($urlPath, $routes)) {
     $controllerClass = $routes[$urlPath][0];
     $method = $routes[$urlPath][1];
