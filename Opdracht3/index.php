@@ -23,14 +23,14 @@
 
   /* ultrafijne startcode laten we nog ff staan
     $usersObj = new UsersView();
-    echo $usersObj->showUser('Bas');
+    echo $usersObj->showUser('Bas'); 
     $usersObj2 = new UsersContr();
-    $usersObj2->createUser('Iet', 'Sanders', '1999-07-07');
+    $usersObj2->createUser('Tammo', 'tammo@tammo.com', 'mooiwachtwoord');
     */
 
     /* ff testen of we een share kunnen maken op basis van wat ik heb gemaakt 
     $sharesObj = new SharesContr();
-    $sharesObj->createShare(2, 'En nog een derde!', 'Nu al succesvoller dan twitter', 'https://hatseflats.nl/');
+    $sharesObj->createShare(1, 'En nog een vierde ook!', 'Wat prachtig dit', 'https://behang.com/');
     */
     
     // Dan moet hij ook uitgelezen kunnen worden
