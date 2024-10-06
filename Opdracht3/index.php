@@ -36,6 +36,16 @@
     // Dan moet hij ook uitgelezen kunnen worden
     $sharesRead = new SharesView();
     echo $sharesRead->showShares();
+    
+    
+    $startHtml = '<div class="position-relative mt-5">
+         <h1 style="text-align:center;">
+          Welcome to Blogding</h1><br>
+          <p style="text-align:center;"><strong>Find something cool? Share it with our community. Look at other shares as well</strong></p><br>
+          <p style="text-align:center;"><a class="btn btn-primary" href="sharesview.php">Share Now</a></p><br>
+          </div>';
+    //echo $startHtml;
+
   ?>
 </body>
 </html>

@@ -3,11 +3,16 @@
     public function showShares() {
         $results = $this->getShares();
         foreach ($results as $row) { //split het array op in individuele items
-            echo "Auteur: " . $row['name'] . "<br>";
-            echo "Titel: " . $row['title'] . "<br>";
-            echo "Post: " . $row['body'] . "<br>";
-            echo "Link: " . $row['link'] . "<br>";
-            echo "Timestamp: " . $row['create_date'] . "<br><br>";
+            echo '<div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">';
+            echo "<h2>" . $row['title'] . "</h2><br>";
+            echo '<small>' . $row['create_date'] . "</small><br>";
+            echo $row['body'] . "<br><br><br>";
+            
+            echo "Author: " . $row['name'] . "<br>";
+            
+            echo '<a class="btn btn-secondary" href="' . $row['link'] . '">Go to Website</a><br>';
+           
+            echo '</div>';
         }
     }
 }
