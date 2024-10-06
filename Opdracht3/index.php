@@ -33,10 +33,10 @@
     $sharesObj->createShare(1, 'En nog een vierde ook!', 'Wat prachtig dit', 'https://behang.com/');
     */
     
-    // Dan moet hij ook uitgelezen kunnen worden
+    /* Dan moet hij ook uitgelezen kunnen worden
     $sharesRead = new SharesView();
     echo $sharesRead->showShares();
-    
+    */
     
     $startHtml = '<div class="position-relative mt-5">
          <h1 style="text-align:center;">
@@ -46,6 +46,19 @@
           </div>';
     //echo $startHtml;
 
+    $routes = [
+      '/shares'=> [SharesView::class, 'showShares'],
+    ];
+
+    //Ik geef eerlijk toe dat ik dit zonder AI niet voor elkaar had gekregen
+    //Al begrijp ik als ik er naar kijk volgens mij redelijk wat er gebeurt
+    $urlPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if (array_key_exists($urlPath, $routes)) {
+    $controllerClass = $routes[$urlPath][0];
+    $method = $routes[$urlPath][1];
+    $controller = new $controllerClass();
+    $controller->$method();
+}
   ?>
 </body>
 </html>
