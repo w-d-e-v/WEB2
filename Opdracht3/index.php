@@ -36,6 +36,7 @@
     if ($urlPath == '/' || $urlPath == '/index.php') { //alleen bij index.php of top domain start HTML tonen
     $startHtml = '<div class="position-relative mt-5">
          <h1 style="text-align:center;">
+         <img src="/blogding.png"><br>
           Welcome to Blogding</h1><br>
           <p style="text-align:center;"><strong>Find something cool? Share it with our community. Look at other shares as well</strong></p><br>
           <p style="text-align:center;"><a class="btn btn-primary" href="/shares">Share Now</a></p><br>
