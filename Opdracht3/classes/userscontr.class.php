@@ -30,5 +30,9 @@
             }
         }
   }
+  
+  public function logoutUser() {
+    setcookie("Blogding", "", time() - 3600);
+  }
 
 }
