@@ -20,23 +20,6 @@
         });
     </script>
   <?php
-
-  /* ultrafijne startcode laten we nog ff staan
-    $usersObj = new UsersView();
-    echo $usersObj->showUser('Bas'); 
-    $usersObj2 = new UsersContr();
-    $usersObj2->createUser('Tammo', 'tammo@tammo.com', 'mooiwachtwoord');
-    */
-
-    /* ff testen of we een share kunnen maken op basis van wat ik heb gemaakt 
-    $sharesObj = new SharesContr();
-    $sharesObj->createShare(1, 'En nog een vierde ook!', 'Wat prachtig dit', 'https://behang.com/');
-    */
-    
-    /* Dan moet hij ook uitgelezen kunnen worden
-    $sharesRead = new SharesView();
-    echo $sharesRead->showShares();
-    */
     
     $routes = [
       '/shares'=> [SharesView::class, 'showShares'],
