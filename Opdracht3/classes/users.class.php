@@ -5,7 +5,7 @@
       $stmt = $this->connect()->prepare($sql);
       $stmt->execute([$naam]);
       // Use fetch() for 1 row, and fetchAll() for all rows
-      $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $results = $stmt->fetch(PDO::FETCH_ASSOC);
       return $results;
     }
 
