@@ -10,4 +10,11 @@
           $this->setShare($user_id, $title, $body, $link);
       }
   }
+
+  public function deleteShare($id) {
+      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $this->delShare($id);
+      }
+  }
 }
+
