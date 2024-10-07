@@ -16,7 +16,7 @@
             echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
             echo '<input type="submit" class="btn btn-danger" value="Delete Share">';
             echo '</form>';
-echo "De row ID is: $row['id']";
+echo "De row ID is: " . $row['id'];
             
             echo '</div>';
         }
