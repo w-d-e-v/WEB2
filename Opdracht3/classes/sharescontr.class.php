@@ -11,9 +11,10 @@
       }
   }
 
-  public function deleteShare($id) {
+  public function deleteShare() {
       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $this->delShare($id);
+          $id = $_POST['id'];
+          $this->delShare($id);
       }
   }
 }
