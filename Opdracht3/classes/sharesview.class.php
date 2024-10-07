@@ -10,7 +10,7 @@
             
             echo "Author: " . $row['name'] . "<br>";
             
-            echo '<a class="btn btn-secondary" href="' . $row['link'] . '">Go to Website</a><br>';
+            echo '<a class="btn btn-secondary" href="' . $row['link'] . '">Go to Website</a><br><br>';
             
             echo '<form method="post" action="/deleteShare">';
             echo '<input type="hidden" name="id" value="' . $row['id'] . '">';

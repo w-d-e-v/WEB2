@@ -25,6 +25,7 @@
       '/shares'=> [SharesView::class, 'showShares'],
       '/register' => [UsersContr::class, 'createUser'],
       '/create' => [SharesContr::class, 'createShare'],
+      '/deleteShare' => [SharesContr::class, 'deleteShare'],
     ];
 
     //Ik geef eerlijk toe dat ik dit zonder AI niet voor elkaar had gekregen
