@@ -14,4 +14,10 @@
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$user_id, $title, $body, $link]);
       }
+
+    protected function delShare($id) {
+        $sql = "DELETE FROM shares WHERE shares.id = ?";
+        $stmt = this->connect()->prepare($sql);
+        $stmt->execute([$id]);
+    }
 }
