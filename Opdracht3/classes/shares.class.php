@@ -17,7 +17,7 @@
 
     protected function delShare($id) {
         $sql = "DELETE FROM shares WHERE id = ?";
-        $stmt = this->connect()->prepare($sql);
+        $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$id]);
     }
 }
