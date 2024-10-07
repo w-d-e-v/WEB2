@@ -23,6 +23,8 @@
             
             if (password_verify($password, $savedPassHash)) {
                 echo "Inloggen gelukt!";
+                setcookie(Blogding, $username, time() + (86400 * 30),);
+                echo "<br>cookie gezet, controleer dit eens!";
             } else {
                 echo "Niet gelukt";
             }
