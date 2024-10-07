@@ -17,13 +17,12 @@
             $results = $this->getUser($username);
             
             $savedPassHash = $results['password'];
-            echo $savedPassHash;
-            echo "<br>";
-            echo $password;
-            /*
+            
             if (password_verify($password, $savedPassHash)) {
                 echo "Inloggen gelukt!";
-            }*/
+            } else {
+                echo "Niet gelukt";
+            }
         }
   }
 
