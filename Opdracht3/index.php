@@ -26,6 +26,7 @@
       '/register' => [UsersContr::class, 'createUser'],
       '/create' => [SharesContr::class, 'createShare'],
       '/deleteShare' => [SharesContr::class, 'deleteShare'],
+      '/login' => [UsersContr::class, 'loginUser'],
     ];
 
     //Ik geef eerlijk toe dat ik dit zonder AI niet voor elkaar had gekregen
