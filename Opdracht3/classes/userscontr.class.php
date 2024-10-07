@@ -8,4 +8,19 @@
           $this->setUser($name, $email, $password);
       }
   }
+
+  public function loginUser() {
+        if (strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            
+            $this->getUser($username);
+            $savedPassHash = $results['password'];
+
+            if (password_verify($password, $savedPassHash)) {
+                echo "Inloggen gelukt!";
+            }
+        }
+  }
+
 }
