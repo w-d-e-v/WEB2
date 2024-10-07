@@ -23,8 +23,11 @@
             
             if (password_verify($password, $savedPassHash)) {
                 echo "Inloggen gelukt!";
-                setcookie("Blogding", $username, time() + (86400 * 30),);
-                echo "<br>cookie gezet, controleer dit eens!";
+                //zet Session variables:
+                $_SESSION["username"] = $username;
+                $_SESSION["loggedIn"] = true;
+                echo $_SESSION["username"];
+                echo "Logged in = " . $_SESSION["loggedIn"];
             } else {
                 echo "Niet gelukt";
             }
@@ -32,7 +35,8 @@
   }
   
   public function logoutUser() {
-    setcookie("Blogding", "", time() - 3600);
+    session_unset();
+    session_destroy();
   }
 
 }
