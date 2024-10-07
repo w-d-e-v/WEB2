@@ -15,7 +15,10 @@
             $password = $_POST['password'];
             
             $results = $this->getUser($username);
-            
+            if (!$results) {
+                echo "User not found!";
+                return;
+            }
             $savedPassHash = $results['password'];
             
             if (password_verify($password, $savedPassHash)) {
