@@ -14,7 +14,7 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
             
-            $this->getUser($username);
+            $results = $this->getUser($username);
             $savedPassHash = $results['password'];
 
             if (password_verify($password, $savedPassHash)) {
