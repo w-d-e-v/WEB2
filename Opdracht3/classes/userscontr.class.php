@@ -6,6 +6,8 @@
           $email = $_POST['email'];
           $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
           $this->setUser($name, $email, $password);
+          header('Location: /login.html');
+          exit;
       }
   }
 
