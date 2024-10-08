@@ -14,9 +14,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="/shares">Shares</a>
               </li>
-              <li class="nav-item">
+              <?php
+              if (isset($_COOKIE["Blogding"])) {
+              echo '<li class="nav-item">
                 <a class="nav-link" href="createshare.html">Maak share</a>
-              </li>
+              </li>';
+              }
+              ?>
             </ul>
             <div class="d-flex">
               <?php
