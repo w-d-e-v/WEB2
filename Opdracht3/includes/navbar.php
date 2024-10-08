@@ -17,7 +17,7 @@
               <?php
               if (checkLogin()) {
               echo '<li class="nav-item">
-                <a class="nav-link" href="createshare.html">Maak share</a>
+                <a class="nav-link" href="createshare.php">Maak share</a>
               </li>';
               }
               ?>

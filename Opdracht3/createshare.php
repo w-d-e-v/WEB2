@@ -19,7 +19,7 @@
     <div class="mt-5 ms-5">
         <h2>Share something!</h2>
         <form method="post" action="/create">
-            <input type="hidden" name="user_id" value="1">
+            <input type="hidden" name="user_id" value="<?php echo $_COOKIE["Blogding"]; ?>">
             <div class="col-12 col-md-6 col-lg-4">
                 <label for="shareTitle" class="form-label">Share Title</label><br>
                 <input type="text" name="title" placeholder="Text share"><br><br>
