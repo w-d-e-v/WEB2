@@ -33,7 +33,7 @@
             <input type="text" name="link" placeholder="https://something.com"><br><br>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <button>Submit</button>
+                <button class="btn btn-primary">Submit</button>
             </div>
         </form>
     </div>
