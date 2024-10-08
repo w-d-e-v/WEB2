@@ -15,7 +15,7 @@
                 <a class="nav-link" href="/shares">Shares</a>
               </li>
               <?php
-              if (!empty($_COOKIE["Blogding"])) {
+              if (checkLogin()) {
               echo '<li class="nav-item">
                 <a class="nav-link" href="createshare.html">Maak share</a>
               </li>';
@@ -24,12 +24,12 @@
             </ul>
             <div class="d-flex">
               <?php
-              if (empty($_COOKIE["Blogding"])) {
+              if (!checkLogin()) {
               echo '<a class="btn btn-outline-dark me-2" href="login.html">Login</a>
               <a class="btn btn-outline-dark" href="register.html">Register</a>';
               } else {
                 echo '<input type="hidden"value="whatever">';
-                echo '<form method="post" action="/logoutUser">';
+                echo '<form method="post" action="/logout">';
                 echo '<input type="submit" class="btn btn-outline-dark me-2" value="Logout">';
                 echo '</form>';
               }
@@ -38,3 +38,12 @@
           </div>
         </div>
       </nav>
+<?php
+  function checkLogin() {
+    if (isset($_COOKIE["Blogding"]) && !empty($_COOKIE["Blogding"])) {
+      return true;
+    } else {
+      return false;
+    }
+    
+  }
