@@ -20,9 +20,13 @@
             </ul>
             <div class="d-flex">
               <?php
-              if ($_SESSION["loggedIn"] = true) {
+              if (!isset($_COOKIE["Blogding"])) {
               echo '<a class="btn btn-outline-dark me-2" href="login.html">Login</a>
               <a class="btn btn-outline-dark" href="register.html">Register</a>';
+              } else {
+                echo '<form method="post" action="/logoutUser">';
+                echo '<input type="submit" class="btn btn-outline-dark me-2" value="Logout">';
+                echo '</form>';
               }
               ?>
             </div>

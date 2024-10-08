@@ -27,6 +27,7 @@
       '/create' => [SharesContr::class, 'createShare'],
       '/deleteShare' => [SharesContr::class, 'deleteShare'],
       '/login' => [UsersContr::class, 'loginUser'],
+      '/logout' => [UsersContr::class, 'logoutUser'],
     ];
 
     //Ik geef eerlijk toe dat ik dit zonder AI niet voor elkaar had gekregen
