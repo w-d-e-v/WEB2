@@ -17,18 +17,22 @@
             $results = $this->getUser($username);
             if (!$results) {
                 echo "User not found!";
-                return;
+                header('Location: /login.html');
+                exit;
             }
             $savedPassHash = $results['password'];
             
             if (password_verify($password, $savedPassHash)) {
-                echo "Inloggen gelukt!";
+                echo "You are logged in!";
                 //zet Session variables:
                 $_SESSION["username"] = $username;
                 $_SESSION["loggedIn"] = true;
-                
+
             } else {
-                echo "Niet gelukt";
+                echo "Wrong password";
+                header('Location: /login.html');
+                exit;
+            
             }
         }
   }
