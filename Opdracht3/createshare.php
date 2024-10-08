@@ -24,7 +24,7 @@
                     include 'includes/class-autoload.inc.php';
                     $user = new UsersView();
                     $userData = $user->showUser($_COOKIE["Blogding"]); 
-                    echo $userData[0];
+                    echo $userData['id'];
                     ?>
                 ">
             <div class="col-12 col-md-6 col-lg-4">
