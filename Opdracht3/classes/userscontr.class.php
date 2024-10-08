@@ -26,8 +26,7 @@
                 //zet Session variables:
                 $_SESSION["username"] = $username;
                 $_SESSION["loggedIn"] = true;
-                echo $_SESSION["username"];
-                echo "Logged in = " . $_SESSION["loggedIn"];
+                
             } else {
                 echo "Niet gelukt";
             }
