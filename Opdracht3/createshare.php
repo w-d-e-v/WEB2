@@ -19,7 +19,14 @@
     <div class="mt-5 ms-5">
         <h2>Share something!</h2>
         <form method="post" action="/create">
-            <input type="hidden" name="user_id" value="<?php echo $_COOKIE["Blogding"]; ?>">
+            <input type="hidden" name="user_id" value="
+                <?php 
+                    include 'includes/class-autoload.inc.php';
+                    $user = new UsersView();
+                    $userData = $user->showUser($_COOKIE["Blogding"]); 
+                    echo $userData[0];
+                    ?>
+                ">
             <div class="col-12 col-md-6 col-lg-4">
                 <label for="shareTitle" class="form-label">Share Title</label><br>
                 <input type="text" name="title" placeholder="Text share"><br><br>
