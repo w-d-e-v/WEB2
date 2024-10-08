@@ -25,6 +25,8 @@
             if (password_verify($password, $savedPassHash)) {
                 echo "You are logged in!";
                 setcookie("Blogding", $username, time() + (86400 * 30), "/");
+                header('Location: /shares');
+                exit;
 
             } else {
                 echo "Wrong password";
@@ -36,7 +38,9 @@
   }
   
   public function logoutUser() {
-    setcookie("Blogding", "", time() - 3600);
+    setcookie("Blogding", "", time() - 3600, "/");
+    header('Location: /index.php');
+                exit;
   }
 
 }
