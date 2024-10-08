@@ -50,4 +50,3 @@
     $controller = new $controllerClass(); //  voorbeeld object maken zoals $sharesRead = new SharesView();
     $controller->$method(); //  en aanroepen zoals echo $sharesRead->showShares();
 }
-  

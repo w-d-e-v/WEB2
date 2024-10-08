@@ -24,9 +24,7 @@
             
             if (password_verify($password, $savedPassHash)) {
                 echo "You are logged in!";
-                //zet Session variables:
-                $_SESSION["username"] = $username;
-                $_SESSION["loggedIn"] = true;
+                setcookie("Blogding", $username, time() + (86400 * 30), "/");
 
             } else {
                 echo "Wrong password";
@@ -38,8 +36,7 @@
   }
   
   public function logoutUser() {
-    session_unset();
-    session_destroy();
+    setcookie("Blogding", "", time() - 3600);
   }
 
 }

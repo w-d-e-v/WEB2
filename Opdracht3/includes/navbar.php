@@ -19,8 +19,12 @@
               </li>
             </ul>
             <div class="d-flex">
-              <a class="btn btn-outline-dark me-2" href="login.html">Login</a>
-              <a class="btn btn-outline-dark" href="register.html">Register</a>
+              <?php
+              if ($_SESSION["loggedIn"] = true) {
+              echo '<a class="btn btn-outline-dark me-2" href="login.html">Login</a>
+              <a class="btn btn-outline-dark" href="register.html">Register</a>';
+              }
+              ?>
             </div>
           </div>
         </div>
