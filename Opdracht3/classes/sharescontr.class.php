@@ -8,6 +8,8 @@
           $body = $_POST['body'];
           $link = $_POST['link'];
           $this->setShare($user_id, $title, $body, $link);
+            header('Location: /shares');
+            exit;
       }
   }
 
